@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+/*
+Green: #67b26f
+Blue: #4ca2cd
+Mid: #5aaa9d
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* once the color gradeint is added take out html to make figure fill up entire size*/
+
+/*html,*/
+body {
+	color: #444;
+	font-family: 'Roboto';
+	padding: 50px;
+	background: linear-gradient(to bottom right, #67b26f, #4ca2cd);
+	height: 100vh;
+	
+	display: flex;
+	align-items: center; /* CROSS AXIS */
+	justify-content: center; /* MAIN AXIS */
+}
+
+/* display: flex puts them side by side */
+.pizza {
+	max-width: 800px;
+	border-radius: 4px;
+	overflow: hidden;
+	box-shadow: 0 30px 80px 10px rgba(0,0,0,.2);
+	
+	display: flex;
+	/* aligns-self = one */
+	/* aligns-items = all */
+	align-items: flex;
+}
+
+.pizza__hero {
+	/* adjust pizza img size here */
+	
+	/* flex: grow / shrink / bases or width */
+	/* flex-basis: 45%; or */
+	flex: 0 0 45%;
+	
+}
+
+.pizza__img {
+	/* ususaly with responsive web design give it a width: 100% */
+	width: 100%;
+	display: block;
+}
+
+.pizza__content {
+	/* flex: increase content box width */
+	/* flex-grow: 1; or */
+	flex: 1;
+	
+	
+	background: white;
+}
+
+.pizza__price {
+	flex: 0 0 50px;
+	background: linear-gradient(to bottom, #67b26f, #4ca2cd);
+	
+	/* change price verticaly */
+	writing-mode: vertical-rl;
+	color: white;
+	font-size: 18px;
+	
+	/* when you define an element with a flex container that has 0 elements it becomes the flex item = $11.99 */
+	display: flex;
+	align-items: center;
+	/* center in both directions */
+	justify-content: center;
+}
+
+
+
+
+
