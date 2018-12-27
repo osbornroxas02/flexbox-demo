@@ -35,8 +35,7 @@ body {
 	box-shadow: 0 30px 80px 10px rgba(0,0,0,.2);
 	
 	display: flex;
-	/* aligns-self = one */
-	/* aligns-items = all */
+	/* aligns-self = 1, aligns-items = all */
 	align-items: flex;
 }
 
@@ -59,9 +58,12 @@ body {
 	/* flex: increase content box width */
 	/* flex-grow: 1; or */
 	flex: 1;
-	
-	
 	background: white;
+	padding: 35px 30px;
+	
+	/* likes default but adjustable items */
+	display: flex; /* side by side */
+	flex-direction: column; /* stacked */
 }
 
 .pizza__price {
@@ -79,6 +81,60 @@ body {
 	/* center in both directions */
 	justify-content: center;
 }
+
+/* align menue dise by side */
+.pizza__title {
+	display: flex;
+	/* align h1 & buttons */
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.pizza__heading {
+	font-size: 20px;
+	/* margin always occupies empty space */
+	margin-right: auto
+}
+
+.pizza__tag {
+	font-size: 10px;
+	text-transform: uppercase;
+	color: white;
+	padding: 2px 7px;
+	border-radius: 100px;
+	margin-left: 7px;
+}
+
+.pizza__tag--1 { background-color: #67b26f; }
+.pizza__tag--2 { background-color: #4ca2cd; }
+.pizza__description { font-size: 14px;}
+
+.pizza__details {
+	/* adjust sde by side */
+	display: flex;
+	
+	/* justify-content: flex; = default spacing. not needed to specify */
+	
+	/* drop icon row down */
+	margin-top: auto;
+}
+
+.pizza__detail {
+	font-size: 15px;
+	text-transform: uppercase;
+	margin-right: 20px;
+	font-weight: 700;
+	
+	display: flex;
+	align-items: center;
+}
+
+.emoji {
+	font-size: 20px;
+	margin-right: 3px;
+}
+
+
 
 
 
